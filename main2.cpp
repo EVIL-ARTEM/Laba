@@ -1,13 +1,22 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main(){
-int dlina = 4;
-int shirina = 8;
-int S = dlina * shirina;
-int P = (dlina* 2) + (shirina * 2);
-int diagonal = (((dlina*dlina) + (shirina*shirina))^0.5);
+double dlina;
+double shirina;
+cin >> dlina;
+cin >> shirina;
+if (dlina <= 0 || shirina <= 0){
+cout << "Error";
+return 0;
+}
+else{
+double diagonal = sqrt((dlina*dlina) + (shirina*shirina));
+double P = (dlina* 2) + (shirina * 2);
+double S = dlina * shirina;
 cout << diagonal << endl;
 cout << P << endl;
 cout << S << endl;
+}
 return 0;
 }
